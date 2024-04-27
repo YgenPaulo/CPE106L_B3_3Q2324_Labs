@@ -2,7 +2,7 @@
 File: student.py
 Resources to manage a student's name and test scores.
 """
-
+import random
 class Student(object):
     """Represents a student."""
 
@@ -47,31 +47,43 @@ class Student(object):
         return self.name >= other.name
 
 def main():
+    listofstudents = []
     """A simple test."""
     student = Student("Ken", 5)
     for i in range(1, 6):
         student.setScore(i, 100)
-    print(student)
+    listofstudents.append(student)
 
     Axcel = Student("Axcel", 4)
     for i in range(1, 5):
-        student.setScore(i,100)
-    print(Axcel)
+        Axcel.setScore(i,100)
+    listofstudents.append(Axcel)
     
     Axcel2 = Student("Axcel", 4)
     for i in range(1, 5):
-        student.setScore(i,100)
-    print(Axcel2)
-    
-    print("First COMPARISON")
-    print(f"Equal Comparison: {Axcel == student}")
-    print(f"Less Than Comparison: {Axcel < student}")
-    print(f"Greater Than Equal to Comparison: {Axcel >= student}")
-    
-    print("SECOND COMPARISON")
-    print(f"Equal Comparison: {Axcel == Axcel2}")
-    print(f"Less Than Comparison: {Axcel < Axcel2}")
-    print(f"Greater Than Equal to Comparison: {Axcel >= Axcel2}")
+        Axcel2.setScore(i,100)
+    listofstudents.append(Axcel2)
+        
+    Nigel = Student("Nigel", 3)
+    for i in range(1, 4):
+        Nigel.setScore(i,100)
+    listofstudents.append(Nigel)
+
+    random.shuffle(listofstudents)
+    print("shuffled", end="->")
+    for student in listofstudents:
+        print (student.getName(), end =" ")
+
+    listofstudents.sort()
+    print()
+    print ("Sorted" , end="->")
+    for student in listofstudents:
+        print (student.getName(), end = " ")
+    print()
+    print("Printing students")
+    for persons in listofstudents:
+        print(persons)
+
 
 if __name__ == "__main__":
     main()
