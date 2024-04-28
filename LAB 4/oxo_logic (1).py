@@ -12,21 +12,17 @@ computerMove()
 import os, random
 import oxo_data
 
-class Game(): #created a new Game Class
-    def __init__(self) -> None: #initialize it
+class Game(): 
+    def __init__(self) -> None: 
         self.game = list(" " * 9)
 
     def newGame():
-        ' return new empty game'
         return list(" " * 9)
 
     def saveGame(game):
-        ' save game to disk '
         oxo_data.saveGame(game)
         
     def restoreGame():
-        ''' restore previously saved game.
-        If game not restored successfully return new game'''
         try:
             game = oxo_data.restoreGame()
             if len(game) == 9:
@@ -36,8 +32,6 @@ class Game(): #created a new Game Class
             return newGame()
         
     def _generateMove(game):
-        ''' generate a random cell from thiose available.
-            If all cells are used return -1'''
         options = [i for i in range(len(game)) if  game[i] == " "]
         if options:
             return random.choice(options)
