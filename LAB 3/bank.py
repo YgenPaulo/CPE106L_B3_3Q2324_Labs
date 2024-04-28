@@ -11,11 +11,7 @@ class Bank:
     An optional file name is also associated
     with the bank, to allow transfer of accounts to and
     from permanent file storage."""
-
-    # The state of the bank is a dictionary of accounts and
-    # a file name.  If the file name is None, a file name
-    # for the bank has not yet been established.
-
+    
     def __init__(self, fileName = None):
         """Creates a new dictionary to hold the accounts.
         If a file name is provided, loads the accounts from
@@ -85,8 +81,6 @@ class Bank:
             pickle.dump(account, fileObj)
         fileObj.close()
 
-# Functions for testing
-       
 def createBank(numAccounts = 1):
     """Returns a new bank with the given number of 
     accounts."""
@@ -120,7 +114,6 @@ def main(number = 10, fileName = None):
     the optional file name argument or from the optional
     number."""
 
-##    testAccount()
     if fileName:
         bank = Bank(fileName)
     else:
