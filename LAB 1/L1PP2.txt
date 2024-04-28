@@ -5,3 +5,6 @@ Enemies
 Ore
 Wa
 Ga
+Thorfin
+THorkell
+Thors
