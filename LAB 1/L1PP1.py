@@ -1,4 +1,4 @@
-import stats 
+import stats
 num = int(input("Enter a list of numbers (999 to Cancel): \n"))
 l = []
 while num != 999:
