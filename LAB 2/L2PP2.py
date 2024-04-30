@@ -1,4 +1,4 @@
-file = input("Enter the filename: ")
+file = input("Enter the filename:  ")
 
 try:
     fread = open(file, "r")
