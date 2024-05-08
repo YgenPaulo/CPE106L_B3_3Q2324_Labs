@@ -57,7 +57,7 @@ def main():
         
     Wong = Student("Wong", 3)
     for i in range(1, 4):
-        Nigel.setScore(i,100)
+        Wong.setScore(i,100)
     listofstudents.append(Wong)
 
     random.shuffle(listofstudents)
