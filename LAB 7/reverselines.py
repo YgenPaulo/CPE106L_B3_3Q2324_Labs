@@ -1,9 +1,3 @@
-"""
-File: reverselines.py
-
-Reverses the lines in a CSV file while
-keeping the first header line in place.
-"""
 
 inFileName = input("Input file name: ")
 outFileName = input("Output file name: ")
