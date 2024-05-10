@@ -56,4 +56,5 @@ class HoopStatsView(EasyFrame):
         self.medianFld.setNumber(column.median())
         self.stdFld.setNumber(column.std())
 
+
     
