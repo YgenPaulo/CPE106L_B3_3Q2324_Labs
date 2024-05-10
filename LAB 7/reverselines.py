@@ -15,3 +15,4 @@ outFile.write(header)
 for line in lyst:
     outFile.write(line)
 outFile.close()
+
